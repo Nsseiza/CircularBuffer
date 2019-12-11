@@ -17,4 +17,8 @@ int Is_full(buffer_struct* buff);
 
 int Is_empty(buffer_struct* buff);
 
+int put(buffer_struct* buff, int data);
+
+int get(buffer_struct* buff);
+
 #endif

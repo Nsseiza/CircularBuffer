@@ -25,3 +25,17 @@ int Is_empty(buffer_struct* buff)
 	
 	return 0;
 }
+
+int put(buffer_struct* buff, int data)
+{
+	if(Is_full())
+		break;
+	else
+	{
+		*(buff->write) = data;
+		buff->write++;
+		
+		if(buff->write == &(buff->buffer[BUFF_SIZE]))
+			buff->write = buff->buffer;
+	}
+}
