@@ -50,8 +50,8 @@ int get(buffer_struct* buff)
 	int data = *(buff->read);
 	buff->read++;
 
-	if(buff->read == &(buff->byffer[BUFF_SIZE]))
-		buff->read = buffer;
+	if(buff->read == &(buff->buffer[BUFF_SIZE]))
+		buff->read = &(buff->buffer[0]);
 
 	return data;	
 }
@@ -68,8 +68,8 @@ void dump(buffer_struct* buff)
 		printf("Buffer element %d", *current);
 		current++;
 		
-		if(current == buff->buffer[BUFF_SIZE-1])
-			current=buff->buffer[0];
+		if(current == &(buff->buffer[BUFF_SIZE-1]))
+			current=&(buff->buffer[0]);
 	}
 	  
 

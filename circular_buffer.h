@@ -1,7 +1,7 @@
 #ifndef CURCULARBUFFER_H_
 #define CIRCULARBUFFER_H_
 
-#define BUF_SIZE 11
+#define BUFF_SIZE 11
 
 typedef struct buffer_struct
 {
