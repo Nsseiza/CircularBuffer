@@ -1,7 +1,8 @@
 # CircularBuffer
 
 #This directory contains file for Circular Buffer exercise:
-	-main. c
-	-buffer_fun.c
-	-buffer_fun.h
+	- main.c
+	- circular_buffer.c
+	- circular_buffer.h
+	- README.txt
  
