@@ -12,7 +12,8 @@ int main(int argc, char* argv[])
 	put(&buff_1, 5);
 	put(&buff_1, 10);
 	
-	printf("\n%d", get(&buff_1));
+	printf("\n%d\n", get(&buff_1));
+	printf("\n%d\n", get(&buff_1));
 	
-	rerturn 0;
+	return 0;
 }
