@@ -6,8 +6,8 @@
 typedef struct buffer_struct
 {
 	int buffer[BUFF_SIZE];
-	buffer_struct* write;
-	buffer_struct* read;
+	int* write;
+	int* read;
 
 }buffer_struct;
 
