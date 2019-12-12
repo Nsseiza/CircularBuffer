@@ -10,9 +10,9 @@ int Init_buffer(buffer_struct* buff)
 
 int Is_full(buffer_struct* buff)
 {
-	if((buff->write+1) == buff->read)
+	if((buff->write+1) == (buff->read))
 		return 1;
-	if((buff->read == &(buff->buffer[0])) && (buff->write == &(buff->buffer[BUFF_SIZE-1])))
+	if((buff->write == &(buff->buffer[BUFF_SIZE-1])) && (buff->read == &(buff->buffer[0])))
 		return 1;
 	
 	return 0;
@@ -28,9 +28,11 @@ int Is_empty(buffer_struct* buff)
 
 int put(buffer_struct* buff, int data)
 {
-	if(Is_full(buff))
+	if(Is_full(buff)){
+		printf("\nBuffer is full\n");
 		return 0;
-	else
+	
+	}else
 	{
 		*(buff->write) = data;
 		buff->write++;

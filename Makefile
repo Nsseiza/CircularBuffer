@@ -12,4 +12,5 @@ circ_buff.o:circular_buffer.c circular_buffer.h
 
 .PHONY: clean
 clean:
-	rm *.o  
+	rm *.o
+	rm buffer
