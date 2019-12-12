@@ -56,4 +56,48 @@ int get(buffer_struct* buff)
 	return data;	
 }
 
+void dump(buffer_struct* buff)
+{
+	if(Is_empty(buff))
+		return;
+
+	int* current = buff->write;
+
+	while(current != buff->write)
+	{
+		printf("Buffer element %d", *current);
+		current++;
+		
+		if(current == buff->buffer[BUFF_SIZE-1])
+			current=buff->buffer[0];
+	}
+	  
+
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
