@@ -21,4 +21,6 @@ int put(buffer_struct* buff, int data);
 
 int get(buffer_struct* buff);
 
+void dump(buffer_struct* buff);
+
 #endif
